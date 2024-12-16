@@ -25,11 +25,13 @@ body {
     background: #584e93;
     background-attachment: fixed;
     /* overflow-x: hidden; */
+
+    /* SET TEST HEIGHTS ON CONTENT */
 }
 
 .content {
     overflow-x: hidden;
-    /* height: auto; */
+    min-height: 300vh;
 }
 
 .container {
@@ -46,7 +48,7 @@ body {
     align-items: center;
     text-align: center;
     position: relative;
-    margin-bottom: 9rem;
+    margin-bottom: 7vh;
     background: linear-gradient(to bottom, #282782, #726ee0, #bba5ff);
     background-attachment: fixed;
     z-index: -10;
@@ -61,13 +63,13 @@ body {
     font-size: 3rem;
     margin: 0 auto;
     width: fit-content;
-    z-index: 3;
+    z-index: -8;
     /* font-family: "Comic Sans MS"; */
 }
 
 #title::after {
     content: "KeMaFeKi";
-    z-index: -1;
+    z-index: -9;
     position: absolute;
     top: 0.2rem;
     left: 0.2rem;
@@ -76,7 +78,7 @@ body {
 
 #title::before {
     content: "KeMaFeKi";
-    z-index: -2;
+    z-index: -10;
     position: absolute;
     top: 0.4rem;
     left: 0.4rem;
@@ -175,7 +177,6 @@ body {
 .cloud-left.cloud-5,
 .cloud-left.cloud-6,
 .cloud-left.cloud-7 {
-    height: 100vh;
     bottom: -2rem;
     /* width: 40%; */
 }
@@ -184,7 +185,13 @@ body {
     position: absolute;
     inset: 0;
     overflow: hidden;
+    max-height: 100vh;
 }
+
+/* .cloud-left,
+.cloud-right {
+    transform: translateY(1rem);
+} */
 
 .cloud-left,
 .cloud-right,
@@ -195,25 +202,34 @@ body {
     animation-iteration-count: infinite; */
 }
 
+.cloud-left,
+.cloud-right {
+    height: max(100vh, 50vw);
+}
+
 #mountain {
     left: 50%;
-    transform: translateX(-50%);
-    z-index: -8;
-    width: 90%;
-    min-width: 70rem;
+    transform: translateX(-50%) scaleY(1.2);
+    z-index: -11;
+    /* width: 90%;
+    min-width: 70rem; */
+    /* height: 100vh;
+    width: fit-content; */
+    height: 80vh;
 }
 
 .cloud-left {
-    height: 100vh;
+    /* height: 100vh; */
     filter: drop-shadow(0.35rem 0.35rem 0px rgba(0, 0, 0, 0.15));
+    transform: translateY(5vh);
     /* animation-name: oscilate;
     animation-duration: 16s; */
 }
 
 .cloud-right {
-    height: 100vh;
+    /* height: 100vh; */
     bottom: -5rem;
-    transform: scaleX(-1);
+    transform: scaleX(-1) translateY(5vh);
     filter: drop-shadow(-0.35rem 0.35rem 0px rgba(0, 0, 0, 0.15));
     /* animation-name: oscilate-right;
     animation-duration: 14s; */

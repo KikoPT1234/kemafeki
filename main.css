@@ -60,13 +60,34 @@ body {
     width: 100%;
 }
 
+body h1 {
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+body h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+}
+
+body h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+body p,
+body li {
+    font-size: 1rem;
+}
+
 #title {
     /* position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%); */
     position: relative;
-    font-size: 3rem;
+    font-size: 2.7rem;
+    font-weight: bold;
     margin: 0 auto;
     width: fit-content;
     z-index: -8;
@@ -92,11 +113,6 @@ body {
     opacity: 100%;
 }
 
-/* .cloud-left,
-.cloud-right {
-    transform: translateY(1rem);
-} */
-
 #mountain,
 #clouds-back,
 #clouds-front {
@@ -113,7 +129,6 @@ body {
 }
 
 #clouds-front {
-    /* min-width: 100%; */
     bottom: 0;
     z-index: 0;
     transform: translateX(-50%);
@@ -124,80 +139,25 @@ body {
     max-height: 70vh;
 }
 
-/* .cloud-2 {
-    animation-delay: 1s;
+li {
+    list-style: disc;
+    list-style-position: inside;
 }
 
-.cloud-3 {
-    animation-delay: 2s;
+.split-card {
+    display: flex;
+    gap: 1rem;
 }
 
-.cloud-4 {
-    animation-delay: 3s;
+.split-card > * {
+    flex: 1 1 0%;
+    min-width: 0;
 }
 
-.cloud-5 {
-    animation-delay: 4s;
+.buffer {
+    height: 200vh;
 }
 
-.cloud-5 {
-    animation-delay: 5s;
-} */
-
-/* @keyframes oscilate {
-    0% {
-        transform: translateX(0);
-    }
-    33.33% {
-        transform: translateX(2.5rem);
-    }
-    66.67% {
-        transform: translateX(-2.5rem);
-    }
-    100% {
-        transform: translateX(0);
-    }
-}
-
-@keyframes oscilate-right {
-    0% {
-        transform: translateX(0) scaleX(-1);
-    }
-    33.33% {
-        transform: translateX(-2.5rem) scaleX(-1);
-    }
-    66.67% {
-        transform: translateX(2.5rem) scaleX(-1);
-    }
-    100% {
-        transform: translateX(0) scaleX(-1);
-    }
-} */
-
-.cloud-1 {
-    z-index: -7;
-}
-
-.cloud-2 {
-    z-index: -6;
-}
-
-.cloud-3 {
-    z-index: -5;
-}
-
-.cloud-4 {
-    z-index: -4;
-}
-
-.cloud-5 {
-    z-index: -3;
-}
-
-.cloud-6 {
-    z-index: -2;
-}
-
-.cloud-7 {
-    z-index: -1;
+.buffer ~ img {
+    width: 70%;
 }
